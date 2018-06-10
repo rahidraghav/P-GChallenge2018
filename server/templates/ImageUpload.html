@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload new File</title>
+</head>
+
+<body <h1>Upload new File</h1><br/>
+    {% if filename %}
+    <h1>File {{ filename }} uploaded sucessfully</h1>
+    {% endif %}
+    <form action='' method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="ambientlight" >Ambient Light</label>
+            <input type="text" name="inputambientlight" id="inputambientlight"  placeholder="Ambient Light" >
+            <label for="steps" >Steps (in meters.)</label>
+            <input type="text" name="inputsteps" id="inputsteps"  placeholder="Steps ">
+            <label for="fileuploader" >File</label>
+            <input type='file' name='file[]' id="fileuploader" multiple=''>
+            <input type='submit' value='upload'>
+        </div>
+    </form>
+</body>
+</html>
